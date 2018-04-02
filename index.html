@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Segoe UI",Arial,sans-serif;}
+
+h1 {
+	font-family: "Verdana";
+	font-size:40px;
+}
+body {
+	background-color:rgb(60, 60, 60);
+}
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+	
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:rgb(30, 30, 30);
+   color: white;
+   text-align: center;
+   font-size: 12px;
+}
+
+table{
+	display:inline-table;
+
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+//search bar
+* {
+  box-sizing: border-box;
+}
+
+.sbar{
+	position: fixed;
+   left: 0;
+   bottom: 25%;
+   width: 100%;
+   background-color:rgb(60,60,60);
+   color: white;
+   text-align: center;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 0px solid grey;
+  float: left;
+  width: 120%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 0px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#London {background-color:rgb(60, 60, 60);}
+#Paris {background-color:rgb(60, 60, 60);}
+#Tokyo {background-color:rgb(60, 60, 60);}
+#land  {background-color:rgb(60, 60, 60);}
+
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="London" class="tabcontent">
+  <h1><img src="shield.png" height="40px" width="40px">Depro-MD</h1>
+  <p>Check URL, Domain, or File hash .</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+ <h1><img src="shield.png" height="40px" width="40px">Depro-MD</h1>
+  <p>Check URL, Domain, or File hash .</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+ <h1><img src="shield.png" height="40px" width="40px">Depro-MD</h1>
+  <p>Check URL, Domain, or File hash .</p>
+</div>
+
+<div id="land" class="tabcontent">
+ <h1><img src="shield.png" height="40px" width="40px">Depro-MD</h1>
+  <p>Check URL, Domain, or File hash .</p>
+</div>
+
+
+
+
+<button class="tablink" onclick="openCity('London', this, 'DodgerBlue')" id="url">URL</button>
+<button class="tablink" onclick="openCity('Paris', this, 'DodgerBlue')" id="hash">File Hash</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'DodgerBlue')" id="ip">IP</button>
+<button class="tablink" onclick="openCity('land', this, 'DodgerBlue')" >Home</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+	if(elmnt.id=="url")
+		{
+		document.getElementsByName("search")[0].value="";
+		document.getElementsByName("search")[0].placeholder="Search URL";
+		}
+		if(elmnt.id=="hash")
+		{
+		document.getElementsByName("search")[0].value="";
+		document.getElementsByName("search")[0].placeholder="Search Hash";
+		}
+		if(elmnt.id=="ip")
+		{
+		document.getElementsByName("search")[0].value="";
+		document.getElementsByName("search")[0].placeholder="Search IP";
+		}
+		
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("url").click();
+</script>
+
+<div class="sbar">
+<form class="example" action="/action_page.php" name="myform"  >
+	<table>
+		<tr>
+			<td>
+				<input type="text" class="searchpla" placeholder="Search.." name="search"> </td>
+				  
+			<td>
+				<button type="submit"><i class="fa fa-search"></i></button> </td>
+				
+		</tr>
+  </table>
+</form>
+<script>
+	
+
+</script>
+<div>
+
+
+
+
+
+     <div class="footer">
+		<p>COPYRIGHT &copy DEPRO.COM 2018</p>
+	 </div>
+</body>
+</html> 
