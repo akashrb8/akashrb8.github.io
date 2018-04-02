@@ -16,7 +16,11 @@ body {
     background-color: #555;
     color: white;
     float: left;
-    border: none;
+    border-right-color:#2196F3 ;
+    border-right-width: 3px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -33,6 +37,7 @@ body {
    color: white;
    text-align: center;
    font-size: 12px;
+   display: inline;
 }
 
 table{
@@ -155,17 +160,17 @@ function openCity(cityName,elmnt,color) {
 	if(elmnt.id=="url")
 		{
 		document.getElementsByName("search")[0].value="";
-		document.getElementsByName("search")[0].placeholder="Search URL";
+		document.getElementsByName("search")[0].placeholder="Scan a URL..";
 		}
 		if(elmnt.id=="hash")
 		{
 		document.getElementsByName("search")[0].value="";
-		document.getElementsByName("search")[0].placeholder="Search Hash";
+		document.getElementsByName("search")[0].placeholder="Scan Hash..";
 		}
 		if(elmnt.id=="ip")
 		{
 		document.getElementsByName("search")[0].value="";
-		document.getElementsByName("search")[0].placeholder="Search IP";
+		document.getElementsByName("search")[0].placeholder="Scan IP..";
 		}
 		
 
@@ -179,7 +184,7 @@ document.getElementById("url").click();
 	<table>
 		<tr>
 			<td>
-				<input type="text" class="searchpla" placeholder="Search.." name="search"> </td>
+				<input type="text" class="searchpla" placeholder="Scan a URL.." name="search"> </td>
 				  
 			<td>
 				<button type="submit"><i class="fa fa-search"></i></button> </td>
@@ -198,7 +203,7 @@ document.getElementById("url").click();
 
 
      <div class="footer">
-		<p>COPYRIGHT &copy DEPRO.COM 2018</p>
+		<p>Copyright &copy Depro-MD 2018 Integrated with  <img src="symantec.png" height="22px" width="23px"><img src="https://www.virustotal.com/ui-public/images/logo.svg" height="20px" width="90px"></p>
 	 </div>
 </body>
 </html> 
